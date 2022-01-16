@@ -8,16 +8,9 @@
 </head>
 <body>
     <?php 
-        $a = 5;
-        if($a < 10){
-            echo "Số $a nhỏ hơn 10";
-        }else{
-            echo "Số $a lớn hơn 10";
+        for ($i=1; $i <= 100 ; $i++) { 
+            echo $i . ' ';
         }
     ?>
-<script type="text/javascript">
-    let a = 10;
-    
-</script>
 </body>
 </html>
