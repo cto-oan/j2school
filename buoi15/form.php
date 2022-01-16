@@ -11,8 +11,8 @@
 		<input type="text" name="name">
 		<br>
 		Giới tính
-		<input type="radio" name="gender" value="0">Nam
-		<input type="radio" name="gender" value="1">Nữ
+		<input type="radio" name="gender" value="Nam">Nam
+		<input type="radio" name="gender" value="Nữ">Nữ
 		<br>
 		Email
 		<input type="mail" name="email">
@@ -28,9 +28,9 @@
 		<br>
 		Sở thích
 		<select name="hobby">
-			<option value="1">Kinh di</option>
-			<option value="2">Trinh thám</option>
-			<option value="3">Thể thao</option>
+			<option>Kinh di</option>
+			<option>Trinh thám</option>
+			<option>Thể thao</option>
 		</select>
 		<button>Đăng ký</button>
 	</form>
