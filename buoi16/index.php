@@ -9,7 +9,9 @@
 <h1>
 	Đây là trang chủ
 </h1>
-
+<a href="form_insert.php">
+	Thêm bài viết
+</a>
 <?php 
 	
 	//Kết nối vs database
@@ -22,7 +24,7 @@
 ?>
 
 <!-- Tạo giao diện cơ bản để hiển thị kết quả -->
-<table>
+<table border="1" width="100%">
 	<tr>
 		<th>Mã</th>
 		<th>Tiêu đề</th>
@@ -33,11 +35,20 @@
 	<!-- truyền nội dung lấy được từ database để truyền vào biến -->
 	<?php foreach ($ket_qua as $tung_bai_tin_tuc){ ?>
 		<tr>
-			<td></td>
+			<td><?php echo $tung_bai_tin_tuc['ma'] ?> </td>
+			<td> 
+				<a href="show.php?ma=<?php echo $tung_bai_tin_tuc['ma'] ?>">
+					<?php echo $tung_bai_tin_tuc['tieu_de'] ?>
+				</a>
+			</td>
+			<td><?php echo $tung_bai_tin_tuc['noi_dung'] ?> </td>
+			<td>
+				<img src="<?php echo $tung_bai_tin_tuc['anh'] ?>" height='200'>
+			</td>
 		</tr>
 	<?php } ?>
 </table>
 
-html
+
 </body>
 </html>

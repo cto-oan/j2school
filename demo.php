@@ -14,7 +14,6 @@
         }else{
             echo 'Biến a lớn hơn 10';
         }
-        
     ?>
 </body>
 </html>
