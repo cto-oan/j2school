@@ -7,15 +7,15 @@
 </head>
 <body>
 <?php
-	$ma = $_GET['ma'];
+	$ma = $_POST['ma'];
 	//Kết nối vs database
-	$ket_noi = mysqli_connect('localhost', 'root', '', 'j2school');
-	mysqli_set_charset($ket_noi,'utf8');
-
+	require 'connect.php';
 	//thực hiện câu lệnh sql
 	$sql = "select * from tin_tuc
 	where ma = $ma";
+	//hàm ket_qua trả về là mảng
 	$ket_qua = mysqli_query($ket_noi, $sql);
+	//dùng fetch_array để chuyển mảng có vị trí là tên cột
 	$bai_tin_tuc = mysqli_fetch_array($ket_qua);
 ?>
 <h1>
@@ -27,5 +27,10 @@
 <p>
 	<img src="<?php echo $bai_tin_tuc['anh'] ?>">
 </p>
+
+<!-- Đóng kết nối khi không còn sử dụng nữa -->
+<?php 
+	mysqli_close($ket_noi)
+?>
 </body>
 </html>
